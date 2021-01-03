@@ -2,9 +2,9 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
 class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    JWT_SECRET_KEY = "duck"
 
     @property
     def SQLALCHEMY_DATABASE_URI(self):
@@ -19,7 +19,14 @@ class DevelopmentConfig(Config):
     DEBUG = True
 
 class ProductionConfig(Config):
-    pass
+    @property
+    def JWT_SECRET_KEY(self):
+        value = os.environ.get("JWT_SECRET_KEY")
+
+        if not value:
+            raise ValueError("JWT Secret Key is not set")
+        
+        return value
 
 class TestingConfig(Config):
     TESTING = True
