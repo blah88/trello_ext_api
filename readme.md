@@ -1,29 +1,22 @@
 # **Richard_Noh_T3A3**
 
-Data structure of Trello extension API
+AWS database @ 35.175.102.155
+Github link: https://github.com/blah88/trello_ext_api
 
-User
-
-Board
-
-List
-
-Card
-
-
+This is an attempt at creating an extension to Trello boards which attempts to enable users to add parent-child relationship to lists and cards in terms of property and visually to create a mind-map. Lists and cards may be placed at all directions instead of just orthogonal postions as per current set up. It is still WIP and database is not properly set up yet although you can connect to it since it is still deployed at AWS.   
 
 
 ## **R2 - Hash passwords, Use ORMs to handle SQLs**
 
 Discuss how the application will handle the privacy of user data within the system, and how security features of the frameworks you are utilising will assist to mitigate security concerns.  
   
-Example: discuss how the use of ORMs mitigate SQL injection attacks, and how API frameworks such as ExpressJS can handle the sanitisation of user input.
+Object Relational Mapping (ORM) frameworks to make the translation of SQL result sets into code objects more seamless. ORM tools often mean developers will rarely have to write SQL statements in their code which use parameterized statements under the hood. This will lessen the likelihood of SQL injection attacks.
 
- **- User passwords are to be hashed.**
+The API framework will sanitise user input.
 
- **- SQL will be handled by ORM minimise SQL injection attacks.**
- 
- **- API frameworks will sanitise user input.**
+User passwords will be hashed which add a layer of protection.
+
+The combination of these measures will give some level of security and enhence user's privacy.
 
 
 
@@ -32,7 +25,7 @@ Example: discuss how the use of ORMs mitigate SQL injection attacks, and how API
 
 Discuss how you will address the following obligations as a developer:  
 - professional obligations (delivering the project on time, being explicit about ongoing maintenance of the system)  
-**CITD**
+**CITD** WIP
 
 - ethical obligations: ensuring that the application conforms with ethical codes of conduct approved by industry  
 **Thorough terms and conditions. Handling of offensive material.** 
@@ -40,6 +33,19 @@ Discuss how you will address the following obligations as a developer:
 - legal obligations: that you have assessed whether the application is subject to any legal regulation, if none, consider any privacy implications
 **Compliance.** 
 **Legal requirements for data storage (PCI DSS)**
+
+Terms and Conditions 
+
+Ethical Obligations as a User: By joining our service you as a user agree to use our service that offensive materials defined by the Summary Offences Act 1988. Further information on what can be considered offensive or harmful is outlined by the following link:
+https://www.esafety.gov.au/report/illegal-harmful-content/what-we-can-investigate
+
+If an ample number of complaints are made the content in question will be investigated and dealt with.
+
+This application adhere to all Australian laws. Some of these legislations include the Privacy Act 1988, the Privacy and Personal Information Act 1998 (NSW), the Telecommunications Act 1997 (Cth) and the Telecommunications (Intercetion and Access) Act 1979 (Cth). 
+
+We respect user privacy until incriminating evidence against a user is found. 
+
+
 
 
 

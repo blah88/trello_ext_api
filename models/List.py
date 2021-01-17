@@ -5,10 +5,9 @@ class List(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
-    board_id = db.Column(db.Integer, db.ForeignKey("board.id"), nullable=False)
-
-    cards = db.relationship("Card", backref="user", lazy="dynamic")
-
+    content = db.Column(db.String())
+    board_id = db.Column(db.Integer, db.ForeignKey("boards.id"), nullable=False)
+    cards = db.relationship("Card", backref="list", lazy="dynamic")
 
     def __repr__(self):
         return f"<List {self.title}>"
