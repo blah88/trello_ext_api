@@ -8,7 +8,6 @@ from sqlalchemy.orm import joinedload
 
 books = Blueprint('books', __name__, url_prefix="/books")
 
-
 @books.route("/", methods=["GET"])
 def book_index():
     #Retrieve all books

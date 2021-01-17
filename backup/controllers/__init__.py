@@ -4,5 +4,6 @@ from controllers.boards_controller import boards
 
 registerable_controllers = [
     auth,
+    #books,
     boards
 ]
